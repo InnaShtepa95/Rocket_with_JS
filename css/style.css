@@ -77,6 +77,7 @@ header{
 .right_header{
     float: right;
     text-align: right;
+    max-width: 820px;
 }
 .right_header form{
     padding-top: 16px;
@@ -120,7 +121,7 @@ header{
     font-weight: bold;
     border: none;
 }
-.right_header nav ul{
+/*.right_header nav ul{
     list-style: none;
 }
 .right_header nav ul li{
@@ -148,7 +149,7 @@ header{
     text-decoration: none;
 
 
-}
+}*/
 /*************************************************************************/
 section {
     margin: 0;
@@ -397,4 +398,25 @@ footer{
 .window a i{
     margin-right: 10px;
     line-height: 20px;
+}
+
+/**********************************/
+.section:nth-of-type(odd):not(:first-child){
+  /*  background: none;*/
+}
+.section--menu{
+    min-height: 50px;
+    padding:0;
+}
+.menu{
+    margin:0;
+}
+.menu__link{
+    padding: 15px;
+}
+.menu--viola .menu__item{
+    margin: 2px;
+}
+.menu__list{
+    text-transform: uppercase;
 }

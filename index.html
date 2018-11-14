@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://resources/demos/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script>
         $( function() {
             $( "#dialog" ).dialog({
@@ -64,18 +68,20 @@
                         <input type="password" name="password">
                         <button id="opener">LOGIN</button>
                     <!--</form>-->
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a> </li>
-                            <li><a href="#">About us</a> </li>
-                            <li><a href="#">menu</a> </li>
-                            <li><a href="#">faq</a> </li>
-                            <li><a href="#">become a member</a> </li>
-                            <li><a href="#">rewards store</a> </li>
-                            <li><a href="#">blog</a></li>
+                    <section class="section section--menu" id="Viola">
+                    <nav class="menu menu--viola">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--current" ><a class="menu__link"href="#">Home</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">About us</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">menu</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">faq</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">become a member</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">rewards store</a> </li>
+                            <li class="menu__item"><a class="menu__link" href="#">blog</a></li>
 
                         </ul>
                     </nav>
+                    </section>
                 </div>
             </div>
         </header>
@@ -141,6 +147,46 @@
     <!--<i class="fas fa-user-plus" ></i>-->
     <!--<span>sign up now</span>-->
 <!--</a>-->
+
+<!-- /container -->
+<script src="js/classie.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script>
+    (function() {
+        [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+            var menuItems = menu.querySelectorAll('.menu__link'),
+                setCurrent = function(ev) {
+                    ev.preventDefault();
+
+                    var item = ev.target.parentNode; // li
+
+                    // return if already current
+                    if (classie.has(item, 'menu__item--current')) {
+                        return false;
+                    }
+                    // remove current
+                    classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                    // set current
+                    classie.add(item, 'menu__item--current');
+                };
+
+            [].slice.call(menuItems).forEach(function(el) {
+                el.addEventListener('click', setCurrent);
+            });
+        });
+
+        [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+            new Clipboard(link);
+            link.addEventListener('click', function() {
+                classie.add(link, 'link-copy--animate');
+                setTimeout(function() {
+                    classie.remove(link, 'link-copy--animate');
+                }, 300);
+            });
+        });
+    })(window);
+</script>
 
 </body>
 </html>
