@@ -1,0 +1,400 @@
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSansBold.eot');
+    src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'),
+    url('../fonts/OpenSansBold.woff2') format('woff2'),
+    url('../fonts/OpenSansBold.woff') format('woff'),
+    url('../fonts/OpenSansBold.ttf') format('truetype'),
+    url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
+
+@font-face {
+    font-family: 'openSansRegular';
+    src: url('../fonts/openSansRegular.eot');
+    src: url('../fonts/openSansRegular.eot') format('embedded-opentype'),
+    url('../fonts/openSansRegular.woff2') format('woff2'),
+    url('../fonts/openSansRegular.woff') format('woff'),
+    url('../fonts/openSansRegular.ttf') format('truetype'),
+    url('../fonts/openSansRegular.svg#openSansRegular') format('svg');
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../fonts/OpenSansLight.eot');
+    src: url('../fonts/OpenSansLight.eot') format('embedded-opentype'),
+    url('../fonts/OpenSansLight.woff2') format('woff2'),
+    url('../fonts/OpenSansLight.woff') format('woff'),
+    url('../fonts/OpenSansLight.ttf') format('truetype'),
+    url('../fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+
+/********************************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    background-image: url("../images/background.png");
+    background-position: top center;
+    background-size:contain;
+    background-repeat: repeat-y;
+    padding-top: 12px;
+
+}
+/***************************************************************/
+header{
+    height: 154px;
+    background-image: url("../images/header.jpg");
+    background-repeat: repeat-x;
+    -webkit-box-shadow: 0 0 2px 2px #cccccc;
+    box-shadow: 0 0 2px 2px #cccccc;
+    padding-top: 11px;
+    box-sizing: border-box;
+    /*border-bottom: solid 15px white;*/
+
+
+}
+.white_bottom{
+    padding-bottom: 16px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+.container
+{
+    max-width: 975px;
+    margin: auto;
+
+}
+.container:after{
+    content:"" ;
+    clear:both;
+    display: block;
+}
+.logo{
+    float: left;
+}
+.right_header{
+    float: right;
+    text-align: right;
+}
+.right_header form{
+    padding-top: 16px;
+    text-align: right;
+    font-family: 'openSansRegular';
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+.right_header form label{
+
+    line-height: 25px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+
+    margin-right: 11px;
+
+}
+.right_header form input{
+
+    line-height: 23px;
+    border: solid 1px #a4d457;
+    width: 130px;
+    margin-right: 9px;
+    padding-left: 6px;
+    font-size: 13px;
+    color: #919191;
+    box-sizing: border-box;
+    -webkit-box-shadow:inset 1px 1px 3px 1px #e0e0e0;
+    box-shadow:inset 1px 1px 3px 1px #e0e0e0;
+}
+.right_header form button{
+    line-height: 25px;
+    background-color:#ebc738 ;
+    color:white;
+
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+.right_header nav ul{
+    list-style: none;
+}
+.right_header nav ul li{
+    display: inline-block;
+    padding: 31px 19px;
+    transition: 0.3s;
+}
+.right_header nav ul li:last-child{
+    margin-right: -19px;
+}
+.right_header nav ul li:hover{
+    background: linear-gradient(to top, #93c847, #a3d063);
+}
+.right_header nav ul li:hover a{
+    color: white;
+    font-style: italic;
+    border-bottom: dotted 1px white;
+}
+.right_header nav ul li a{
+    color: #deeec8;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+
+
+}
+/*************************************************************************/
+section {
+    margin: 0;
+    padding: 0;
+
+}
+section h1{
+
+    color: #ebc738;
+    font-size: 36px ;
+    text-transform: uppercase;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-weight: bold;
+    font-family: 'OpenSansBold';
+
+}
+.back_col{
+
+    padding: 20px 20px 10px;
+    background-color: white;
+    margin-bottom: 18px;
+}
+.container img {
+    display: block;
+}
+
+.back_col p{
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'openSansRegular';
+    color: #323232;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+section img{
+    width: 100%;
+}
+
+/***********************************************************************/
+footer{
+
+    background-color: #323232;
+    border-top: solid 15px #bbdb8c ;
+    padding-top: 17px;
+    /*padding-bottom: 17px;*/
+}
+
+/************************/
+.footer_block_first{
+    float: left;
+    margin-right: 85px;
+;
+
+}
+
+.footer_block_first ul {
+    list-style: none
+}
+
+.footer_block_first ul li a{
+    color: #c8c8c8;
+    font-size: 16px;
+    font-family: 'OpenSansLight';
+    text-decoration: none;
+    text-align: left;
+
+}
+/**************************/
+.footer_block_second{
+    float: left;
+}
+
+.footer_block_second ul {
+    list-style: none;
+}
+
+.footer_block_second ul li a{
+    color: #c8c8c8;
+    font-size: 16px;
+    font-family: 'OpenSansLight';
+    text-decoration: none;
+    text-align: left;
+
+}
+.footer_block_second:after{
+    content:"" ;
+    clear:both;
+    display: block;
+}
+/****************************/
+.footer_block_third{
+    float: right;
+    width: 255px;
+}
+.footer_block_third:after{
+    content:"" ;
+    clear:both;
+    display: block;
+}
+.footer_block_third p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'OpenSansBold';
+    padding-bottom: 20px;
+}
+
+.footer_block_third ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.footer_block_third ul li a img{
+    margin-right: 15px;
+    padding-bottom: 130px;
+
+}
+.footer_block_first ul li a img:nth-last-child(3){
+    content:"" ;
+    margin-right: 0;
+}
+
+/*********************************************************************/
+/*.sign_up {
+    border: solid 1px red;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: red;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 3s;
+
+}
+
+.sign_up i{
+    font-size: 21px;
+    margin-right: 10px;
+    transition: 3s;
+}
+
+.sign_up:hover i{
+    margin-right: 120px;
+
+}
+.sign_up:hover{
+    transform: rotate(20deg);
+    transition: 3s;
+}
+
+.sign_up:hover span{
+   opacity: 0;
+}
+
+.sign_up:hover span{
+    transition: 7s;
+}
+
+*/
+
+.ui-widget.ui-widget-content{
+    width: 100%!important;
+    max-width: 750px!important;
+    padding: 0px;
+}
+.ui-dialog .ui-dialog-title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.ui-dialog .ui-dialog-titlebar-close{
+    display: none;
+}
+.ui-widget.ui-widget-content{
+    border: none;
+}
+
+.ui-corner-all{
+    border-radius: 0px!important;
+}
+.ui-dialog .ui-dialog-titlebar{
+    padding: 0px;
+    line-height: 100px;
+    background-color: black;
+}
+.ui-dialog .ui-dialog-content{
+    padding: 40px 92px 166px 72px ;
+}
+
+.new_widget label{
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    color: black;
+    margin-right: 64px;
+    vertical-align: middle;
+}
+.new_widget input{
+    display: inline-block;
+    width: 100%;
+    max-width: 360px;
+    height: 58px;
+    border:  solid 1px black;
+
+}
+.new_widget button{
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 530px;
+   /* margin: auto;*/
+    color: black;
+    font-weight: bold;
+    background-color: #d1d1d1;
+    line-height: 60px;
+   margin-top: 40px;
+    margin-left: 30px;
+
+}
+.window p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.window a{
+    text-align: center;
+    width: 100%;
+    max-width: 530px;
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+    background-color: #557acb;
+    color: white;
+    line-height: 60px;
+    border: solid 1px black;
+    text-decoration: none;
+}
+.window a i{
+    margin-right: 10px;
+    line-height: 20px;
+}
