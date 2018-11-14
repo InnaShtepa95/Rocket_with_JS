@@ -402,14 +402,15 @@ footer{
 
 /**********************************/
 .section:nth-of-type(odd):not(:first-child){
-  /*  background: none;*/
+    background: none;
 }
 .section--menu{
     min-height: 50px;
     padding:0;
 }
 .menu{
-    margin:0;
+
+    margin: 0;
 }
 .menu__link{
     padding: 15px;
@@ -419,4 +420,13 @@ footer{
 }
 .menu__list{
     text-transform: uppercase;
+}
+.section{
+    margin-top: 15px;
+}
+.menu--viola .menu__link{
+    color: white;
+}
+.menu--viola .menu__link:hover, .menu--viola .menu__link:focus{
+
 }
